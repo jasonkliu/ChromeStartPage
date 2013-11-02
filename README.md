@@ -11,3 +11,5 @@ page or set of pages" under "On startup". Now click "Use current pages" to set t
 
 * Uninstallation is the reverse of installation; change your home page back and uninstall the extension.
 
+* If you need an 'imperial' clock (12:34pm, etc) delete 'clock.js' and rename 'clock_imperial.js' to 'clock.js'.
+
