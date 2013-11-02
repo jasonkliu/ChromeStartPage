@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Replace New Tab (custom)",
+  "version": "0.1",
+  "description": "Replaces New Tab with local newtab.html",
+  "icons": {
+      "96": "icon.png"
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab.html"
+   },
+   "permissions": [ "tabs" ]
+}
