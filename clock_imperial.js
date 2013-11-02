@@ -9,23 +9,15 @@
             Date.getHoursTwoDigits = function()
             {
                 var hr = now.getHours();
-                if (hr >= 13) {
-                   hr = hr-12;
-                }
-                if (hr == 0) {
-                   hr = 12;
-                }
-                return hr;
-            }
-            Date.getMerid = function()
-            {
-                var hr = now.getHours();
                 var merid = "am";
                 if (hr >= 13) {
                    hr = hr-12;
                    merid = "pm";
                 }
-                return merid;
+                if (hr == 0) {
+                   hr = 12;
+                }
+                return [hr,merid];
             }
             Date.getDDMMYY = function()
             {
@@ -37,13 +29,12 @@
             }
             var now = new Date(),
 
-            //Combinining Date.getHoursTwoDigits and Date.getMerid
-            //var hours = Date.getHoursTwoDigits();
-            //var hrs = hours.hr;
-            //var merids = hours.merid;
-            //time = Date.getMerid() + Date.getHoursTwoDigits();
+            //Finding the hour and the merid(am/pm) from one function
+            hours = Date.getHoursTwoDigits();
+            var hrs = hours[0];
+            var merids = hours[1];
 
-            time = Date.getHoursTwoDigits() + ':' + Date.getMinutesTwoDigits() + Date.getMerid() + ' ~ ' + Date.getDDMMYY();
+            time = hrs + ':' + Date.getMinutesTwoDigits() + merids + ' ~ ' + Date.getDDMMYY();
             document.getElementById('time').innerHTML = ["", time].join('');
             setTimeout(updateClock, 1000);
         }
