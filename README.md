@@ -15,7 +15,8 @@ page or set of pages" under "On startup". Now click "Use current pages" to set t
 
 
 How to add to Firefox (doesn't require extension):
-* Drag 'newtab_firefox.html' into Firefox. Then go to Options and under Home Page, click "Use Current Page".
+* Delete 'newtab.html' and rename 'firefox.html' to 'newtab.html'.
+* Drag the changed 'newtab.html' into Firefox. Then go to Options and under Home Page, click "Use Current Page".
 * NOTE: Firefox doesn't like gradients so the background is slightly modified from the Chrome version.
 
 * Open a new tab and type about:config in the address bar. Search for "browser.newtab.url".
