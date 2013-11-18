@@ -6,20 +6,10 @@
         <style type="text/css">
                         body {
                 background : #eff5fa;
-                # Firefox doesn't like gradients for some reason
-                # background : radial-gradient(ellipse at center, #ffffff 0%, #eee 100%);
-                # background : -moz-radial-gradient(#eee, #fff);
+                /* Firefox doesn't like gradients for some reason
+                background : radial-gradient(ellipse at center, #ffffff 0%, #eee 100%);
+                background : -moz-radial-gradient(#eee, #fff); */
                 }
-#                 .keepcentered {
-#                 position : relative;
-#                 left : 50%;
-#                 top : 50%;
-#                 width : 480px;
-#                 # height : 300px;
-#                 margin-left : -300px;
-#                 # margin-top : -150px;
-#                 font-weight : 100;
-#                 }
                 .keepcentered {
                 position : absolute;
                 left : 50%;
@@ -86,7 +76,7 @@
                 </tr>
                 <tr>
                         <td><a href="http://www.feedly.com">Feedly</a></td>
-                        <td><a href="https://www.play.google.com/apps/publish">Play</a></td>
+                        <td><a href="http://www.play.google.com/apps/publish">Play</a></td>
                         <td><a href="http://www.lifehacker.com">Lifehacker</a></td>
                         <td><a href="http://www.overapi.com">OverAPI</a></td>
                         <td><a href="http://www.yahoo.com">Yahoo</a></td>
@@ -100,6 +90,18 @@
                 </tr>
             </table>
             <br>
+			<!-- jquery method to show frame -->
+            <!-- <script src="jquery-1.9.1.min.js"></script>
+            <script>
+            $(function(){
+             $("#includedContent").load("quotes.html");
+            });
+            </script>
+            <div id="includedContent"></div> -->
+			
+			<!-- SSI method to show frame -->
+            <!-- #include virtual="quotes.html" -->
+            <iframe src="quotes.html" height="300" width="480" frameBorder="0"></iframe>
             </center>
         </p>
 </div>
