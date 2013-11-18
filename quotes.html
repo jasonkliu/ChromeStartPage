@@ -7,8 +7,9 @@
             .quotes {
             display : none;
             text-align : center;
-            } 
-             
+			font-family: 'Roboto', sans-serif;
+            font-style : normal;
+            }  
         </style>
         </head>
 
@@ -245,24 +246,9 @@ Booker T. Washington</p>
 <p class="quotes">114. The measure of who we are is what we do with what we have.<br />
 - Anonymous</p>
 
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+ <!--Google's extension content policy made it necessary to use an external js file-->
 <script src="jquery-1.9.1.min.js"></script>
-<script>
-(function() {
-
-    var quotes = $(".quotes");
-    var quoteIndex = -1;
-
-    function showNextQuote() {
-        ++quoteIndex;
-        quotes.eq(quoteIndex % quotes.length)
-            .fadeIn(2000)
-            .delay(5000)
-            .fadeOut(2000, showNextQuote);
-    }
-    showNextQuote();
-})();
-</script>
+<script src="quote.js"></script>
 
 </body>
 
