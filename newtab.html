@@ -9,16 +9,6 @@
                 background : radial-gradient(ellipse at center, #ffffff 0%, #eee 100%);
                 background : -moz-radial-gradient(#eee, #fff);
                 }
-#                 .keepcentered {
-#                 position : relative;
-#                 left : 50%;
-#                 top : 50%;
-#                 width : 480px;
-#                 # height : 300px;
-#                 margin-left : -300px;
-#                 # margin-top : -150px;
-#                 font-weight : 100;
-#                 }
                 .keepcentered {
                 position : absolute;
                 left : 50%;
@@ -51,9 +41,6 @@
                 a:link {
                 text-decoration : none;
                 text-shadow: 0px 0px 0px #000;
-                .quotes{
-                display : none;
-                }
                 }
         </style>
         <!--Google's extension content policy made it necessary to use an external js file-->
@@ -102,15 +89,18 @@
                 </tr>
             </table>
             <br>
-            <script src="jquery-1.9.1.min.js"></script>
-            <!-- <script>
+			<!-- jquery method to show frame -->
+            <!-- <script src="jquery-1.9.1.min.js"></script>
+            <script>
             $(function(){
              $("#includedContent").load("quotes.html");
             });
             </script>
             <div id="includedContent"></div> -->
+			
+			<!-- SSI method to show frame -->
             <!-- #include virtual="quotes.html" -->
-            <iframe src="quotes.html"></iframe>
+            <iframe src="quotes.html" height="300" width="480" frameBorder="0"></iframe>
             </center>
         </p>
 </div>
