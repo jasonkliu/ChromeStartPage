@@ -1,4 +1,4 @@
-        function updateClock() 
+        function updateClock()
         {
             Date.getMinutesTwoDigits = function()
             {
@@ -16,7 +16,13 @@
                 var dd = now.getDate();
                 var mm = now.getMonth()+1;
                 var yyyy = now.getFullYear();
-                if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} yyyy = dd+'/'+mm+'/'+yyyy;
+                if (dd < 10) {
+                  dd='0'+dd
+                }
+                if (mm < 10) {
+                  mm='0'+mm
+                }
+                yyyy = mm+'/'+dd+'/'+yyyy;
                 return yyyy;
             }
             var now = new Date(),
@@ -24,5 +30,5 @@
             document.getElementById('time').innerHTML = ["", time].join('');
             setTimeout(updateClock, 1000);
         }
-        
+
 window.onload=updateClock
