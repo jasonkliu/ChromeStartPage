@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Roboto-Thin.ttf') format('truetype')
+}
+
+body {
+  background : #ffffff;
+  background : radial-gradient(ellipse at center, #ffffff 0%, #eee 100%);
+  background : -moz-radial-gradient(#eee, #fff);
+}
+
+.keepcentered {
+  position : absolute;
+  left : 50%;
+  top : 50%;
+  width : 480px;
+  height : 300px;
+  margin-left : -240px;
+  margin-top : -150px;
+  font-weight : 100;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-style : normal;
+  color : #d64937; /* Change the color of the colored font on the page. */
+  margin : 5px;
+}
+
+td, tr {
+  width: 20%;
+  text-align: center;
+  font-size : large;
+}
+
+a {
+  font-weight: 200;
+  color : #999;
+  font-size : large;
+}
+
+a:hover{
+  color: #eee;
+}
+
+a:link {
+  text-decoration : none;
+  text-shadow: 0px 0px 0px #000;
+}
