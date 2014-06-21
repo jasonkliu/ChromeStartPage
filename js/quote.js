@@ -1,6 +1,7 @@
 (function() {
 
     var quotes = $(".quotes");
+    //var quotes = document.getElementById("quotes");
     var quoteIndex = -1;
 
     function showNextQuote() {
