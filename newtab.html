@@ -9,8 +9,8 @@
 
     <body>
         <div class="keepcentered">
-            <center><font size=72><div id="time"></div></font></center>
-            <p><center>
+            <font size=72><div id="time"></div></font>
+            <p>
             <table width="100%" border="0px">
                 <tr>
                         <td>Favorites</td>
@@ -49,7 +49,9 @@
                 </tr>
             </table>
             <br>
-			<!-- jquery method to show frame -->
+
+            <iframe src="quotes.html" height="300" width="480" frameBorder="0"></iframe>
+            <!-- jquery method to show frame -->
             <!-- <script src="jquery-1.9.1.min.js"></script>
             <script>
             $(function(){
@@ -57,12 +59,9 @@
             });
             </script>
             <div id="includedContent"></div> -->
-
-			<!-- SSI method to show frame -->
-            <!-- #include virtual="quotes.html" -->
-            <iframe src="quotes.html" height="300" width="480" frameBorder="0"></iframe>
-            </center>
-        </p>
-</div>
+            <!-- SSI method to show frame -->
+            <!-- include virtual="quotes.html" -->
+            </p>
+        </div>
     </body>
 </html>
