@@ -5,10 +5,18 @@
   src: url('../fonts/Roboto-Thin.ttf') format('truetype')
 }
 
-body {
-  background : #ffffff;
-  background : radial-gradient(ellipse at center, #ffffff 0%, #eee 100%);
-  background : -moz-radial-gradient(#eee, #fff);
+@-moz-document url-prefix() {
+  body {
+    background : #eff5fa; /* Firefox doesn't like gradients */
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  body {
+    background : #ffffff; /* CSS targets Chrome/Opera/Safari */
+    background : radial-gradient(ellipse at center, #ffffff 0%, #eee 100%);
+    background : -moz-radial-gradient(#eee, #fff);
+  }
 }
 
 .keepcentered {
