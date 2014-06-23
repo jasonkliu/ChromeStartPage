@@ -10,6 +10,7 @@ function updateClock() {
         var hr = now.getHours();
         return hr;
     }
+
     Date.getDDMMYY = function() {
         var dd = now.getDate();
         var mm = now.getMonth() + 1;
@@ -23,10 +24,19 @@ function updateClock() {
         yyyy = mm + '/' + dd + '/' + yyyy;
         return yyyy;
     }
-    var now = new Date(),
-    time = Date.getHoursTwoDigits() + ':' + Date.getMinutesTwoDigits() + ' ~ ' + Date.getDDMMYY();
+
+    //time = Date.getHoursTwoDigits() + ':' + Date.getMinutesTwoDigits() + ' ~ ' + Date.getDDMMYY();
+    var now = new Date();
+    var minutes = now.getMinutes();
+    var date = now.getDate()
+    var month = now.getMonth() + 1
+    time = now.getHours() + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ~ '
+      + (month < 10 ? '0' + month : month) + '/' + (date < 10 ? '0' + date : date)
+      + '/' + now.getFullYear();
+
     document.getElementById('time').innerHTML = ["", time].join('');
     setTimeout(updateClock, 1000);
+
 }
 
-window.onload=updateClock
+window.onload = updateClock
