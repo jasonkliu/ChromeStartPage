@@ -11,7 +11,8 @@ page or set of pages" under "On startup". Now click "Use current pages" to set t
 
 * Uninstallation is the reverse of installation; change your home page back and uninstall the extension.
 
-* If you need an 'imperial' clock (12:34pm, etc) delete `clock.js` and rename `clock_imperial.js` to `clock.js`.
+* If you need an 'imperial' clock (12:34pm, etc) modify the last line of `js/clock.js` to:
+`window.onload = updateClockImperial;`  (TODO: Find a good way to do this by locale; toLocaleString() is unreliable)
 
 
 How to add to Firefox (doesn't require extension):
@@ -24,4 +25,5 @@ How to add to Firefox (doesn't require extension):
 
 * Uninstallation is the reverse of installation; change your home page back and fix `about:config`.
 
-* If you need an 'imperial' clock (12:34pm, etc) delete `clock.js` and rename `clock_imperial.js` to `clock.js`.
+* If you need an 'imperial' clock (12:34pm, etc) modify the last line of `js/clock.js` to:
+`window.onload = updateClockImperial;`  (TODO: Find a good way to do this by locale; toLocaleString() is unreliable)
